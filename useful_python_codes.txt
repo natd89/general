@@ -1,0 +1,5 @@
+# to access mouse output in Linux
+1) mouse = open('/dev/input/mouse0','r')
+2) var = mouse.read(<# bytes>)
+3) struct.unpack(<# bytes>*'B', var) -> this decodes the C struct data type
+4) useful to know event tied to device. To find out use cd /dev/input/by-id and ls -l to see which events are tied to which device.
